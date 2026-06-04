@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
+  initActiveMenu();
   initMobileMenu();
   initScrollReveal();
   initSmoothScroll();
@@ -75,12 +76,30 @@ function initScrollReveal() {
   reveals.forEach(el => observer.observe(el));
 }
 
+/* --- Highlight Active Menu based on URL --- */
+function initActiveMenu() {
+  let currentPath = window.location.pathname.split('/').pop();
+  if (!currentPath || currentPath === '') {
+    currentPath = 'index.html';
+  }
+  
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    const href = link.getAttribute('href');
+    // If the path contains the link href, or both are home page
+    if (href && (currentPath.indexOf(href) !== -1 || (currentPath === 'index.html' && href === 'index.html') || (currentPath.startsWith('tin-tuc-') && href === 'tin-tuc.html') || (currentPath.startsWith('phap-thoai-') && href === 'phap-thoai.html'))) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
 /* --- Smooth Scroll for anchor links --- */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const id = anchor.getAttribute('href');
-      if (id === '#') return;
+      if (id === '#' || id === '') return;
       const target = document.querySelector(id);
       if (!target) return;
 
@@ -88,29 +107,8 @@ function initSmoothScroll() {
       const headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 72;
       const top = target.getBoundingClientRect().top + window.scrollY - headerH - 16;
       window.scrollTo({ top, behavior: 'smooth' });
-
-      // Update active nav
-      document.querySelectorAll('.nav-menu a').forEach(a => a.classList.remove('active'));
-      anchor.classList.add('active');
     });
   });
-
-  // Highlight nav on scroll
-  const sections = document.querySelectorAll('section[id]');
-  if (!sections.length) return;
-
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY + 100;
-    sections.forEach(sec => {
-      const top = sec.offsetTop - 100;
-      const bottom = top + sec.offsetHeight;
-      const id = sec.getAttribute('id');
-      const link = document.querySelector(`.nav-menu a[href="#${id}"]`);
-      if (link) {
-        link.classList.toggle('active', scrollY >= top && scrollY < bottom);
-      }
-    });
-  }, { passive: true });
 }
 
 /* --- Lightbox for Gallery --- */
@@ -149,65 +147,68 @@ function initLightbox() {
 function initReadMore() {
   // 1. News Cards
   document.querySelectorAll('.news-card').forEach(card => {
-    const triggers = card.querySelectorAll('.card-img, h3, .read-more-btn');
-    triggers.forEach(el => {
-      el.style.cursor = 'pointer';
-      el.addEventListener('click', (e) => {
-        // Prevent default only if it's a click that should toggle
-        e.preventDefault();
-        e.stopPropagation();
+    const excerpt = card.querySelector('.news-excerpt');
+    const full = card.querySelector('.news-full');
+    const btn = card.querySelector('.read-more-btn');
+    
+    // Only register toggle listeners if the card is meant for inline expansion
+    if (excerpt && full && btn) {
+      const triggers = card.querySelectorAll('.card-img, h3, .read-more-btn');
+      triggers.forEach(el => {
+        el.style.cursor = 'pointer';
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
 
-        const excerpt = card.querySelector('.news-excerpt');
-        const full = card.querySelector('.news-full');
-        const btn = card.querySelector('.read-more-btn');
-        if (!excerpt || !full || !btn) return;
+          const isExpanded = btn.classList.contains('expanded');
 
-        const isExpanded = btn.classList.contains('expanded');
-
-        if (isExpanded) {
-          full.style.display = 'none';
-          excerpt.style.display = '';
-          btn.classList.remove('expanded');
-          btn.childNodes[0].textContent = 'Đọc thêm ';
-        } else {
-          excerpt.style.display = 'none';
-          full.style.display = 'block';
-          btn.classList.add('expanded');
-          btn.childNodes[0].textContent = 'Thu gọn ';
-        }
+          if (isExpanded) {
+            full.style.display = 'none';
+            excerpt.style.display = '';
+            btn.classList.remove('expanded');
+            btn.childNodes[0].textContent = 'Đọc thêm ';
+          } else {
+            excerpt.style.display = 'none';
+            full.style.display = 'block';
+            btn.classList.add('expanded');
+            btn.childNodes[0].textContent = 'Thu gọn ';
+          }
+        });
       });
-    });
+    }
   });
 
   // 2. Dharma Cards
   document.querySelectorAll('.dharma-card').forEach(card => {
-    const triggers = card.querySelectorAll('.card-thumb, h3, .read-more-btn');
-    triggers.forEach(el => {
-      el.style.cursor = 'pointer';
-      el.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
+    const excerpt = card.querySelector('.dharma-excerpt');
+    const full = card.querySelector('.dharma-full');
+    const btn = card.querySelector('.read-more-btn');
 
-        const excerpt = card.querySelector('.dharma-excerpt');
-        const full = card.querySelector('.dharma-full');
-        const btn = card.querySelector('.read-more-btn');
-        if (!excerpt || !full || !btn) return;
+    // Only register toggle listeners if the card is meant for inline expansion
+    if (excerpt && full && btn) {
+      const triggers = card.querySelectorAll('.card-thumb, h3, .read-more-btn');
+      triggers.forEach(el => {
+        el.style.cursor = 'pointer';
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
 
-        const isExpanded = btn.classList.contains('expanded');
+          const isExpanded = btn.classList.contains('expanded');
 
-        if (isExpanded) {
-          full.style.display = 'none';
-          excerpt.style.display = '';
-          btn.classList.remove('expanded');
-          btn.childNodes[0].textContent = 'Đọc thêm ';
-        } else {
-          excerpt.style.display = 'none';
-          full.style.display = 'block';
-          btn.classList.add('expanded');
-          btn.childNodes[0].textContent = 'Thu gọn ';
-        }
+          if (isExpanded) {
+            full.style.display = 'none';
+            excerpt.style.display = '';
+            btn.classList.remove('expanded');
+            btn.childNodes[0].textContent = 'Đọc thêm ';
+          } else {
+            excerpt.style.display = 'none';
+            full.style.display = 'block';
+            btn.classList.add('expanded');
+            btn.childNodes[0].textContent = 'Thu gọn ';
+          }
+        });
       });
-    });
+    }
   });
 }
 
