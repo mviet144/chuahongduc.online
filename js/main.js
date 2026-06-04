@@ -252,7 +252,7 @@ function initContactForm() {
       const body = encodeURIComponent(
         `Họ tên: ${nameInput.value}\nEmail: ${emailInput.value}\nChủ đề: ${document.getElementById('form-subject')?.value || ''}\n\nNội dung:\n${messageInput.value}`
       );
-      window.location.href = `mailto:minhviet@chuahongduc.online?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:contact@chuahongduc.online?subject=${subject}&body=${body}`;
       statusEl.textContent = 'Đang mở ứng dụng email để gửi tin nhắn...';
       statusEl.className = 'form-status success';
     } finally {

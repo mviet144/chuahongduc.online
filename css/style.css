@@ -43,16 +43,13 @@ ul { list-style: none; }
 h1,h2,h3,h4,h5 { font-family: 'Playfair Display', serif; line-height: 1.3; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-/* --- Lotus Divider --- */
-.lotus-divider {
-  display: flex; align-items: center; justify-content: center;
-  gap: 16px; margin: 12px 0;
+/* --- Accent Line --- */
+.accent-line {
+  width: 48px; height: 3px;
+  background: var(--gold);
+  margin: 16px auto;
+  border-radius: 2px;
 }
-.lotus-divider::before, .lotus-divider::after {
-  content: ''; height: 1px; width: 60px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-}
-.lotus-divider svg { width: 28px; height: 28px; fill: var(--gold); }
 
 /* --- Section Header --- */
 .section-title {
@@ -344,12 +341,11 @@ h1,h2,h3,h4,h5 { font-family: 'Playfair Display', serif; line-height: 1.3; }
   display: flex; align-items: center; justify-content: space-between;
   margin-bottom: 16px;
 }
-.program-icon {
-  width: 52px; height: 52px; border-radius: 14px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.6rem;
-  box-shadow: 0 2px 8px rgba(201,168,76,0.2);
+.program-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem; font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
 }
 .program-status {
   padding: 4px 12px; border-radius: 20px;
