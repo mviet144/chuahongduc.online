@@ -145,33 +145,68 @@ function initLightbox() {
   });
 }
 
-/* --- Read More Toggle for News Cards --- */
+/* --- Read More Toggle for News & Dharma Cards --- */
 function initReadMore() {
-  document.querySelectorAll('.read-more-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const card = btn.closest('.card-body');
-      if (!card) return;
+  // 1. News Cards
+  document.querySelectorAll('.news-card').forEach(card => {
+    const triggers = card.querySelectorAll('.card-img, h3, .read-more-btn');
+    triggers.forEach(el => {
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', (e) => {
+        // Prevent default only if it's a click that should toggle
+        e.preventDefault();
+        e.stopPropagation();
 
-      const excerpt = card.querySelector('.news-excerpt');
-      const full = card.querySelector('.news-full');
-      if (!excerpt || !full) return;
+        const excerpt = card.querySelector('.news-excerpt');
+        const full = card.querySelector('.news-full');
+        const btn = card.querySelector('.read-more-btn');
+        if (!excerpt || !full || !btn) return;
 
-      const isExpanded = btn.classList.contains('expanded');
+        const isExpanded = btn.classList.contains('expanded');
 
-      if (isExpanded) {
-        // Collapse
-        full.style.display = 'none';
-        excerpt.style.display = '';
-        btn.classList.remove('expanded');
-        btn.childNodes[0].textContent = 'Đọc thêm ';
-      } else {
-        // Expand
-        excerpt.style.display = 'none';
-        full.style.display = 'block';
-        btn.classList.add('expanded');
-        btn.childNodes[0].textContent = 'Thu gọn ';
-      }
+        if (isExpanded) {
+          full.style.display = 'none';
+          excerpt.style.display = '';
+          btn.classList.remove('expanded');
+          btn.childNodes[0].textContent = 'Đọc thêm ';
+        } else {
+          excerpt.style.display = 'none';
+          full.style.display = 'block';
+          btn.classList.add('expanded');
+          btn.childNodes[0].textContent = 'Thu gọn ';
+        }
+      });
+    });
+  });
+
+  // 2. Dharma Cards
+  document.querySelectorAll('.dharma-card').forEach(card => {
+    const triggers = card.querySelectorAll('.card-thumb, h3, .read-more-btn');
+    triggers.forEach(el => {
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const excerpt = card.querySelector('.dharma-excerpt');
+        const full = card.querySelector('.dharma-full');
+        const btn = card.querySelector('.read-more-btn');
+        if (!excerpt || !full || !btn) return;
+
+        const isExpanded = btn.classList.contains('expanded');
+
+        if (isExpanded) {
+          full.style.display = 'none';
+          excerpt.style.display = '';
+          btn.classList.remove('expanded');
+          btn.childNodes[0].textContent = 'Đọc thêm ';
+        } else {
+          excerpt.style.display = 'none';
+          full.style.display = 'block';
+          btn.classList.add('expanded');
+          btn.childNodes[0].textContent = 'Thu gọn ';
+        }
+      });
     });
   });
 }
