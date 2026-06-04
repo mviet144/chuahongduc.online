@@ -3,20 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chùa Hồng Đức - Xã Điện Hồng, Thị xã Điện Bàn, Quảng Nam</title>
-  <meta name="description" content="Chùa Hồng Đức - Ngôi chùa tọa lạc tại xã Điện Hồng, thị xã Điện Bàn, tỉnh Quảng Nam. Nơi tu tập, hướng dẫn Phật pháp và sinh hoạt tâm linh.">
-  <meta name="keywords" content="Chùa Hồng Đức, Điện Hồng, Điện Bàn, Quảng Nam, Phật giáo, chùa, lễ Phật">
-  <meta property="og:title" content="Chùa Hồng Đức">
-  <meta property="og:description" content="Ngôi chùa tọa lạc tại xã Điện Hồng, thị xã Điện Bàn, tỉnh Quảng Nam.">
+  <title>Chùa Hồng Đức — Đại diện tín đồ Phật giáo xã Điện Hồng, Điện Bàn, Quảng Nam</title>
+  <meta name="description" content="Chùa Hồng Đức (Đại diện tín đồ Phật giáo xã Điện Hồng) — Ngôi chùa tọa lạc tại Thôn Lạc Thành, xã Điện Hồng, thị xã Điện Bàn, tỉnh Quảng Nam. Nơi tu tập, hướng dẫn Phật pháp, từ thiện xã hội và sinh hoạt tâm linh.">
+  <meta name="keywords" content="Chùa Hồng Đức, Điện Hồng, Điện Bàn, Quảng Nam, Phật giáo, chùa, lễ Phật, từ thiện, Đại diện tín đồ Phật giáo">
+  <meta name="author" content="Chùa Hồng Đức">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Chùa Hồng Đức — Đại diện tín đồ Phật giáo xã Điện Hồng">
+  <meta property="og:description" content="Ngôi chùa tọa lạc tại Thôn Lạc Thành, xã Điện Hồng, thị xã Điện Bàn, tỉnh Quảng Nam. Nơi tu tập, từ thiện và sinh hoạt tâm linh.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chuahongduc.online">
-  <meta property="og:image" content="images/hero.png">
+  <meta property="og:image" content="https://chuahongduc.online/images/hero.png">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:site_name" content="Chùa Hồng Đức">
   <link rel="canonical" href="https://chuahongduc.online">
+
+  <!-- JSON-LD Structured Data — Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ReligiousOrganization",
+    "name": "Chùa Hồng Đức",
+    "alternateName": "Đại diện tín đồ Phật giáo xã Điện Hồng, huyện Điện Bàn",
+    "url": "https://chuahongduc.online",
+    "logo": "https://chuahongduc.online/favicon.svg",
+    "image": "https://chuahongduc.online/images/hero.png",
+    "description": "Chùa Hồng Đức là cơ sở tôn giáo được UBND tỉnh Quảng Nam công nhận theo Quyết định số 1286/QĐ-UBND, trực thuộc Giáo hội Phật giáo Việt Nam tỉnh Quảng Nam.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Thôn Lạc Thành",
+      "addressLocality": "Xã Điện Hồng, Thị xã Điện Bàn",
+      "addressRegion": "Quảng Nam",
+      "addressCountry": "VN"
+    },
+    "email": "minhviet@chuahongduc.online",
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Giáo hội Phật giáo Việt Nam tỉnh Quảng Nam"
+    },
+    "foundingDate": "2024",
+    "nonprofitStatus": "ReligiousOrganization",
+    "sameAs": []
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="images/hero.png">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
@@ -26,7 +67,7 @@
   <!-- ========== HEADER ========== -->
   <header class="header" id="header">
     <div class="header-inner">
-      <a href="#" class="logo">
+      <a href="#home" class="logo">
         <div class="logo-icon">☸</div>
         <div class="logo-text">
           <h1>Chùa Hồng Đức</h1>
@@ -34,17 +75,17 @@
         </div>
       </a>
 
-      <nav class="nav-menu" id="nav-menu">
+      <nav class="nav-menu" id="nav-menu" aria-label="Main navigation">
         <a href="#home" class="active">Trang chủ</a>
-        <a href="#about">Giới thiệu</a>
+        <a href="#about">Về chúng tôi</a>
+        <a href="#programs">Hoạt động</a>
         <a href="#schedule">Lịch sinh hoạt</a>
         <a href="#news">Phật sự</a>
-        <a href="#dharma">Pháp thoại</a>
         <a href="#gallery">Hình ảnh</a>
         <a href="#contact">Liên hệ</a>
       </nav>
 
-      <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Mở menu điều hướng">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -53,7 +94,7 @@
   <!-- ========== HERO ========== -->
   <section class="hero" id="home">
     <div class="hero-bg">
-      <img src="images/hero.png" alt="Chùa Hồng Đức">
+      <img src="images/hero.png" alt="Toàn cảnh Chùa Hồng Đức tại xã Điện Hồng, Quảng Nam">
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content">
@@ -62,7 +103,8 @@
       </div>
       <h2>Chùa Hồng Đức</h2>
       <p class="hero-sub">Nơi An Lạc · Hướng Thiện · Tu Tập</p>
-      <p class="hero-addr">📍 Xã Điện Hồng, Thị xã Điện Bàn, Quảng Nam</p>
+      <p class="hero-addr">📍 Thôn Lạc Thành, Xã Điện Hồng, Thị xã Điện Bàn, Quảng Nam</p>
+      <p class="hero-legal">Đại diện tín đồ Phật giáo xã Điện Hồng — QĐ số 1286/QĐ-UBND</p>
     </div>
     <div class="hero-scroll">
       <span>Cuộn xuống</span>
@@ -83,31 +125,155 @@
   <!-- ========== ABOUT ========== -->
   <section class="about" id="about">
     <div class="container">
+      <div class="section-title reveal">
+        <h2>Về Chúng Tôi</h2>
+        <div class="lotus-divider">
+          <svg viewBox="0 0 24 24"><path d="M12 2C10.08 4.08 8 7.27 8 10c0 2.76 1.79 5 4 5s4-2.24 4-5c0-2.73-2.08-5.92-4-8z"/></svg>
+        </div>
+        <p>Giới thiệu về Chùa Hồng Đức và sứ mệnh hoạt động</p>
+      </div>
+
       <div class="about-grid">
         <div class="about-image reveal">
-          <img src="images/garden.png" alt="Vườn chùa Hồng Đức">
+          <img src="images/garden.png" alt="Khuôn viên Chùa Hồng Đức tại Thôn Lạc Thành, Điện Hồng">
         </div>
         <div class="about-text reveal">
-          <div class="lotus-divider" style="justify-content:flex-start">
-            <svg viewBox="0 0 24 24"><path d="M12 2C10.08 4.08 8 7.27 8 10c0 2.76 1.79 5 4 5s4-2.24 4-5c0-2.73-2.08-5.92-4-8z"/></svg>
+          <h3>Lịch Sử & Sứ Mệnh</h3>
+          <p>Chùa Hồng Đức tọa lạc tại <strong>Thôn Lạc Thành, xã Điện Hồng, thị xã Điện Bàn, tỉnh Quảng Nam</strong> — vùng đất giàu truyền thống văn hóa và lịch sử miền Trung Việt Nam. Chùa là cơ sở tôn giáo chính thức, được UBND tỉnh Quảng Nam công nhận theo <strong>Quyết định số 1286/QĐ-UBND</strong>.</p>
+          <p>Dưới sự hướng dẫn tu tập của Thầy <strong>Thích Bửu Nhân</strong>, chùa là nơi quy tụ Phật tử gần xa đến lễ Phật, nghe pháp, tu tập và tham gia các hoạt động từ thiện xã hội. Chùa trực thuộc sự quản lý của <strong>Giáo hội Phật giáo Việt Nam tỉnh Quảng Nam</strong>.</p>
+          <p>Với sứ mệnh <strong>hoằng pháp lợi sinh</strong>, chùa thường xuyên tổ chức các khóa tu, lễ hội Phật giáo truyền thống và các chương trình an sinh xã hội, góp phần vào đời sống tinh thần và vật chất của cộng đồng địa phương.</p>
+        </div>
+      </div>
+
+      <!-- Organization Info Cards -->
+      <div class="org-info-grid reveal">
+        <div class="org-card">
+          <div class="org-icon">🏛️</div>
+          <h4>Tên Pháp Lý</h4>
+          <p>Đại diện tín đồ Phật giáo xã Điện Hồng, huyện Điện Bàn</p>
+        </div>
+        <div class="org-card">
+          <div class="org-icon">📜</div>
+          <h4>Quyết Định Thành Lập</h4>
+          <p>Số 1286/QĐ-UBND do UBND tỉnh Quảng Nam cấp</p>
+        </div>
+        <div class="org-card">
+          <div class="org-icon">🙏</div>
+          <h4>Trụ Trì</h4>
+          <p>Thầy Thích Bửu Nhân</p>
+        </div>
+        <div class="org-card">
+          <div class="org-icon">☸️</div>
+          <h4>Trực Thuộc</h4>
+          <p>Giáo hội Phật giáo Việt Nam tỉnh Quảng Nam</p>
+        </div>
+      </div>
+
+      <!-- Mission Values -->
+      <div class="mission-grid reveal">
+        <div class="mission-card">
+          <div class="mission-icon">🧘</div>
+          <h4>Tu Tập</h4>
+          <p>Hướng dẫn Phật tử tu tập theo Chánh pháp, nuôi dưỡng đời sống tâm linh an lạc.</p>
+        </div>
+        <div class="mission-card">
+          <div class="mission-icon">📖</div>
+          <h4>Hoằng Pháp</h4>
+          <p>Giảng dạy giáo lý Phật đà, tổ chức thuyết pháp và lớp học giáo lý hàng tuần.</p>
+        </div>
+        <div class="mission-card">
+          <div class="mission-icon">❤️</div>
+          <h4>Từ Thiện</h4>
+          <p>Phát gạo, cứu trợ thiên tai, hỗ trợ người nghèo và hoàn cảnh khó khăn tại địa phương.</p>
+        </div>
+        <div class="mission-card">
+          <div class="mission-icon">🤝</div>
+          <h4>Đoàn Kết</h4>
+          <p>Gắn kết cộng đồng Phật tử, xây dựng đời sống hòa hợp, tương thân tương ái.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROGRAMS / HOẠT ĐỘNG ========== -->
+  <section class="programs" id="programs">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Hoạt Động & Chương Trình</h2>
+        <div class="lotus-divider">
+          <svg viewBox="0 0 24 24"><path d="M12 2C10.08 4.08 8 7.27 8 10c0 2.76 1.79 5 4 5s4-2.24 4-5c0-2.73-2.08-5.92-4-8z"/></svg>
+        </div>
+        <p>Các chương trình phục vụ cộng đồng và hoạt động Phật sự đang triển khai</p>
+      </div>
+
+      <div class="programs-grid">
+        <!-- Program 1 -->
+        <div class="program-card reveal">
+          <div class="program-header">
+            <div class="program-icon">🍚</div>
+            <span class="program-status active">Đang hoạt động</span>
           </div>
-          <h2>Giới Thiệu Chùa Hồng Đức</h2>
-          <p>Chùa Hồng Đức tọa lạc tại xã Điện Hồng, thị xã Điện Bàn, tỉnh Quảng Nam — vùng đất giàu truyền thống văn hóa và lịch sử miền Trung Việt Nam.</p>
-          <p>Dưới sự hướng dẫn tu tập của Thầy <strong>Thích Bửu Nhân</strong>, chùa là nơi quy tụ Phật tử gần xa đến lễ Phật, nghe pháp, tu tập và tham gia các hoạt động từ thiện xã hội.</p>
-          <p>Chùa thường xuyên tổ chức các khóa tu, lễ hội Phật giáo truyền thống và các chương trình an sinh xã hội, góp phần vào đời sống tinh thần của cộng đồng.</p>
-          <div class="highlight">
-            <div class="highlight-item">
-              <div class="icon">🙏</div>
-              <h4>Tu Tập</h4>
-            </div>
-            <div class="highlight-item">
-              <div class="icon">📖</div>
-              <h4>Học Pháp</h4>
-            </div>
-            <div class="highlight-item">
-              <div class="icon">❤️</div>
-              <h4>Từ Thiện</h4>
-            </div>
+          <h3>Phát Gạo Từ Thiện Hàng Tháng</h3>
+          <p>Hàng tháng vào ngày Rằm, chùa Hồng Đức tổ chức chương trình phát gạo miễn phí cho các hộ nghèo, người già neo đơn và hoàn cảnh khó khăn tại xã Điện Hồng và các vùng lân cận. Mỗi đợt phát từ 100-200 phần gạo (mỗi phần 10kg) cùng nhu yếu phẩm thiết yếu như mì gói, nước mắm, dầu ăn.</p>
+          <div class="program-meta">
+            <span>📅 Hàng tháng (ngày Rằm)</span>
+            <span>📍 Tại sân chùa Hồng Đức</span>
+          </div>
+        </div>
+
+        <!-- Program 2 -->
+        <div class="program-card reveal">
+          <div class="program-header">
+            <div class="program-icon">🌱</div>
+            <span class="program-status active">Đang hoạt động</span>
+          </div>
+          <h3>Khóa Tu Mùa Hè Cho Thanh Thiếu Niên</h3>
+          <p>Hàng năm vào dịp hè, chùa tổ chức khóa tu từ 3-5 ngày dành cho thanh thiếu niên địa phương. Chương trình bao gồm: học thiền, nghe pháp thoại, sinh hoạt nhóm, rèn luyện kỹ năng sống và tham gia công tác xã hội tình nguyện. Khóa tu giúp các em hướng thiện, rèn luyện đạo đức và phát triển nhân cách.</p>
+          <div class="program-meta">
+            <span>📅 Tháng 6-7 hàng năm</span>
+            <span>👥 30-50 thanh thiếu niên/khóa</span>
+          </div>
+        </div>
+
+        <!-- Program 3 -->
+        <div class="program-card reveal">
+          <div class="program-header">
+            <div class="program-icon">🆘</div>
+            <span class="program-status active">Đang hoạt động</span>
+          </div>
+          <h3>Cứu Trợ Thiên Tai & Hỗ Trợ Khẩn Cấp</h3>
+          <p>Miền Trung Việt Nam thường xuyên hứng chịu bão lũ. Chùa Hồng Đức phối hợp cùng Giáo hội Phật giáo Việt Nam tỉnh Quảng Nam và các mạnh thường quân tổ chức quyên góp, vận chuyển và phát quà cứu trợ đến bà con vùng lũ. Chương trình bao gồm phát lương thực, nước uống, quần áo, chăn mền và hỗ trợ sửa chữa nhà cửa sau bão.</p>
+          <div class="program-meta">
+            <span>📅 Mùa mưa bão (tháng 10-12)</span>
+            <span>📍 Quảng Nam và các tỉnh lân cận</span>
+          </div>
+        </div>
+
+        <!-- Program 4 -->
+        <div class="program-card reveal">
+          <div class="program-header">
+            <div class="program-icon">📿</div>
+            <span class="program-status active">Đang hoạt động</span>
+          </div>
+          <h3>Thuyết Pháp & Giảng Kinh Định Kỳ</h3>
+          <p>Mỗi Chủ Nhật hàng tuần và các ngày lễ lớn trong Phật giáo (Phật đản, Vu Lan, Thành đạo), Thầy Thích Bửu Nhân trực tiếp thuyết pháp, giảng giải kinh điển và hướng dẫn Phật tử phương pháp tu tập. Các buổi thuyết pháp mở cửa cho tất cả mọi người, không phân biệt tôn giáo hay xuất xứ.</p>
+          <div class="program-meta">
+            <span>📅 Chủ Nhật hàng tuần + ngày lễ</span>
+            <span>🙏 Giảng sư: Thầy Thích Bửu Nhân</span>
+          </div>
+        </div>
+
+        <!-- Program 5 -->
+        <div class="program-card reveal">
+          <div class="program-header">
+            <div class="program-icon">📚</div>
+            <span class="program-status active">Đang hoạt động</span>
+          </div>
+          <h3>Lớp Giáo Lý Cho Phật Tử Tại Gia</h3>
+          <p>Chùa mở lớp giáo lý hàng tuần vào sáng Chủ Nhật, dành cho Phật tử tại gia muốn tìm hiểu sâu hơn về giáo lý nhà Phật. Nội dung bao gồm: Tứ Diệu Đế, Bát Chánh Đạo, Thập Thiện Nghiệp, giới luật Phật tử tại gia, và phương pháp thiền định. Lớp học phù hợp cho cả người mới bắt đầu và Phật tử đã quy y.</p>
+          <div class="program-meta">
+            <span>📅 Chủ Nhật hàng tuần, 10:00-11:30</span>
+            <span>👥 Mọi đối tượng</span>
           </div>
         </div>
       </div>
@@ -176,40 +342,55 @@
         <!-- Card 1 -->
         <div class="news-card reveal">
           <div class="card-img">
-            <img src="images/ceremony.png" alt="Lễ Phật đản">
+            <img src="images/ceremony.png" alt="Đại lễ Phật đản tại Chùa Hồng Đức" loading="lazy">
             <span class="card-date">15/04/2026</span>
           </div>
           <div class="card-body">
             <span class="card-tag">Lễ hội</span>
             <h3>Trang nghiêm Đại lễ Phật đản Phật lịch 2570</h3>
-            <p>Chùa Hồng Đức long trọng tổ chức Đại lễ Phật đản, hàng trăm Phật tử về chùa dâng hương, tắm Phật và nghe pháp thoại nhân ngày kỷ niệm Đức Phật ra đời.</p>
-            <a href="#" class="read-more">Đọc thêm →</a>
+            <p class="news-excerpt">Chùa Hồng Đức long trọng tổ chức Đại lễ Phật đản, hàng trăm Phật tử về chùa dâng hương, tắm Phật và nghe pháp thoại nhân ngày kỷ niệm Đức Phật ra đời.</p>
+            <div class="news-full" style="display:none;">
+              <p>Sáng ngày 15/04/2026 (nhằm ngày Rằm tháng Tư Âm lịch), Chùa Hồng Đức đã long trọng tổ chức Đại lễ Phật Đản — Phật lịch 2570. Buổi lễ được bắt đầu từ 7 giờ sáng với nghi thức dâng hương, tụng kinh và cầu nguyện quốc thái dân an.</p>
+              <p>Hàng trăm Phật tử từ xã Điện Hồng và các vùng lân cận đã về chùa tham dự. Điểm nhấn của buổi lễ là nghi thức Tắm Phật — tượng trưng cho việc gội rửa phiền não, nuôi dưỡng tâm từ bi. Sau đó, Thầy Thích Bửu Nhân đã có bài pháp thoại ý nghĩa về tinh thần Phật đản trong đời sống hiện đại.</p>
+              <p>Buổi chiều, chùa tổ chức chương trình văn nghệ Phật giáo và phát quà cho trẻ em trong vùng, tạo không khí vui tươi và đoàn kết cho cộng đồng.</p>
+            </div>
+            <button class="read-more-btn" data-target="news-1">Đọc thêm <span class="arrow">→</span></button>
           </div>
         </div>
         <!-- Card 2 -->
         <div class="news-card reveal">
           <div class="card-img">
-            <img src="images/garden.png" alt="Khóa tu mùa hè">
+            <img src="images/garden.png" alt="Khóa tu mùa hè cho thanh thiếu niên tại Chùa Hồng Đức" loading="lazy">
             <span class="card-date">01/06/2026</span>
           </div>
           <div class="card-body">
             <span class="card-tag">Khóa tu</span>
             <h3>Khóa tu mùa hè cho thanh thiếu niên</h3>
-            <p>Chùa tổ chức khóa tu mùa hè dành cho thanh thiếu niên với các hoạt động: thiền tập, học giáo lý, sinh hoạt nhóm và tham gia công tác xã hội.</p>
-            <a href="#" class="read-more">Đọc thêm →</a>
+            <p class="news-excerpt">Chùa tổ chức khóa tu mùa hè dành cho thanh thiếu niên với các hoạt động: thiền tập, học giáo lý, sinh hoạt nhóm và tham gia công tác xã hội.</p>
+            <div class="news-full" style="display:none;">
+              <p>Nhằm tạo môi trường lành mạnh cho các em thanh thiếu niên trong dịp nghỉ hè, Chùa Hồng Đức tổ chức khóa tu "Hướng Thiện — Vui Sống" kéo dài 3 ngày 2 đêm.</p>
+              <p>Chương trình bao gồm: thiền tập buổi sáng, học giáo lý căn bản (nhân quả, hiếu đạo), sinh hoạt nhóm rèn kỹ năng giao tiếp và làm việc đội nhóm, và buổi chiều tham gia hoạt động tình nguyện tại địa phương như dọn vệ sinh đường làng và thăm hỏi người già neo đơn.</p>
+              <p>Khóa tu đã thu hút gần 40 em thanh thiếu niên tham gia, nhận được sự ủng hộ nhiệt tình từ phụ huynh và chính quyền địa phương.</p>
+            </div>
+            <button class="read-more-btn" data-target="news-2">Đọc thêm <span class="arrow">→</span></button>
           </div>
         </div>
         <!-- Card 3 -->
         <div class="news-card reveal">
           <div class="card-img">
-            <img src="images/hero.png" alt="Lễ Vu Lan">
+            <img src="images/hero.png" alt="Lễ Vu Lan Báo Hiếu tại Chùa Hồng Đức" loading="lazy">
             <span class="card-date">15/07/2026</span>
           </div>
           <div class="card-body">
             <span class="card-tag">Lễ hội</span>
             <h3>Lễ Vu Lan Báo Hiếu — Mùa hiếu hạnh năm Ất Tỵ</h3>
-            <p>Mùa Vu Lan về, chùa Hồng Đức tổ chức Đại lễ Vu Lan Báo Hiếu, bông hồng cài áo, nhắc nhở đạo nghĩa sinh thành và lòng hiếu kính cha mẹ.</p>
-            <a href="#" class="read-more">Đọc thêm →</a>
+            <p class="news-excerpt">Mùa Vu Lan về, chùa Hồng Đức tổ chức Đại lễ Vu Lan Báo Hiếu, bông hồng cài áo, nhắc nhở đạo nghĩa sinh thành và lòng hiếu kính cha mẹ.</p>
+            <div class="news-full" style="display:none;">
+              <p>Lễ Vu Lan Báo Hiếu là một trong những ngày lễ quan trọng nhất trong năm tại Chùa Hồng Đức. Năm nay, buổi lễ được tổ chức vào ngày Rằm tháng 7 Âm lịch với sự tham dự của hàng trăm Phật tử.</p>
+              <p>Buổi sáng bắt đầu với nghi thức tụng kinh Vu Lan, sau đó là lễ cài bông hồng — bông hồng đỏ cho những ai còn mẹ, bông hồng trắng cho những ai đã mất mẹ. Nghi thức này luôn mang đến nhiều cảm xúc sâu lắng, nhắc nhở mỗi người về công ơn sinh thành dưỡng dục.</p>
+              <p>Chiều cùng ngày, chùa tổ chức chương trình phát quà cho các cụ già neo đơn trong xã, thể hiện tinh thần "Hiếu đạo không chỉ dành cho cha mẹ mình, mà còn cho tất cả bậc trưởng thượng trong cộng đồng".</p>
+            </div>
+            <button class="read-more-btn" data-target="news-3">Đọc thêm <span class="arrow">→</span></button>
           </div>
         </div>
       </div>
@@ -224,49 +405,49 @@
         <div class="lotus-divider">
           <svg viewBox="0 0 24 24"><path d="M12 2C10.08 4.08 8 7.27 8 10c0 2.76 1.79 5 4 5s4-2.24 4-5c0-2.73-2.08-5.92-4-8z"/></svg>
         </div>
-        <p>Bài giảng và chia sẻ Phật pháp</p>
+        <p>Bài giảng và chia sẻ Phật pháp từ Thầy Thích Bửu Nhân</p>
       </div>
       <div class="dharma-grid">
-        <a href="#" class="dharma-card reveal">
+        <div class="dharma-card reveal">
           <div class="card-thumb">
-            <img src="images/ceremony.png" alt="Ý nghĩa Phật đản">
+            <img src="images/ceremony.png" alt="Bài giảng ý nghĩa Phật đản" loading="lazy">
           </div>
           <div class="card-info">
             <h3>Ý nghĩa ngày Phật đản trong đời sống tu tập</h3>
-            <p>Đức Phật ra đời là sự kiện trọng đại, mang ánh sáng giác ngộ đến với nhân loại. Bài pháp thoại chia sẻ ý nghĩa sâu xa của ngày kỷ niệm này.</p>
-            <span class="speaker">Thầy Thích Bửu Nhân</span>
+            <p>Đức Phật ra đời là sự kiện trọng đại, mang ánh sáng giác ngộ đến với nhân loại. Bài pháp thoại chia sẻ ý nghĩa sâu xa của ngày kỷ niệm này và cách áp dụng tinh thần Phật đản vào cuộc sống hàng ngày.</p>
+            <span class="speaker">🙏 Thầy Thích Bửu Nhân</span>
           </div>
-        </a>
-        <a href="#" class="dharma-card reveal">
+        </div>
+        <div class="dharma-card reveal">
           <div class="card-thumb">
-            <img src="images/garden.png" alt="Công đức và phước đức">
+            <img src="images/garden.png" alt="Bài giảng về công đức và phước đức" loading="lazy">
           </div>
           <div class="card-info">
             <h3>Công đức và phước đức — Sự khác biệt trong tu tập</h3>
-            <p>Phân biệt rõ ràng giữa công đức và phước đức, giúp Phật tử hiểu và hành trì đúng đắn trên con đường tu học.</p>
-            <span class="speaker">Thầy Thích Bửu Nhân</span>
+            <p>Phân biệt rõ ràng giữa công đức và phước đức, giúp Phật tử hiểu và hành trì đúng đắn trên con đường tu học. Làm thế nào để vừa tích lũy phước báu vừa phát triển trí tuệ giải thoát.</p>
+            <span class="speaker">🙏 Thầy Thích Bửu Nhân</span>
           </div>
-        </a>
-        <a href="#" class="dharma-card reveal">
+        </div>
+        <div class="dharma-card reveal">
           <div class="card-thumb">
-            <img src="images/hero.png" alt="Ý nghĩa cầu an">
+            <img src="images/hero.png" alt="Bài giảng ý nghĩa cầu an" loading="lazy">
           </div>
           <div class="card-info">
             <h3>Ý nghĩa cầu an — Cầu nguyện đúng chánh pháp</h3>
-            <p>Cầu an không chỉ là nghi lễ mà còn là phương pháp chuyển hóa tâm thức, mang lại bình an thực sự cho tự thân và tha nhân.</p>
-            <span class="speaker">Thầy Thích Bửu Nhân</span>
+            <p>Cầu an không chỉ là nghi lễ mà còn là phương pháp chuyển hóa tâm thức, mang lại bình an thực sự cho tự thân và tha nhân. Tìm hiểu cách cầu nguyện hiệu quả theo lời Phật dạy.</p>
+            <span class="speaker">🙏 Thầy Thích Bửu Nhân</span>
           </div>
-        </a>
-        <a href="#" class="dharma-card reveal">
+        </div>
+        <div class="dharma-card reveal">
           <div class="card-thumb">
-            <img src="images/ceremony.png" alt="Con đường tu tập">
+            <img src="images/ceremony.png" alt="Bài giảng con đường tu tập" loading="lazy">
           </div>
           <div class="card-info">
             <h3>Con đường tu tập — Từ sơ phát tâm đến giác ngộ</h3>
-            <p>Hướng dẫn con đường tu tập căn bản cho người Phật tử tại gia, từ giữ giới, tu định đến phát triển trí tuệ.</p>
-            <span class="speaker">Thầy Thích Bửu Nhân</span>
+            <p>Hướng dẫn con đường tu tập căn bản cho người Phật tử tại gia, từ giữ giới, tu định đến phát triển trí tuệ. Bài pháp thoại phù hợp cho cả người mới bắt đầu tìm hiểu Phật pháp.</p>
+            <span class="speaker">🙏 Thầy Thích Bửu Nhân</span>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </section>
@@ -283,24 +464,65 @@
       </div>
       <div class="gallery-grid">
         <div class="g-item reveal">
-          <img src="images/hero.png" alt="Chánh điện chùa Hồng Đức">
+          <img src="images/hero.png" alt="Toàn cảnh Chánh điện chùa Hồng Đức" loading="lazy">
           <div class="g-overlay"><span>Chánh điện chùa Hồng Đức</span></div>
         </div>
         <div class="g-item reveal">
-          <img src="images/ceremony.png" alt="Lễ Phật đản">
+          <img src="images/ceremony.png" alt="Đại lễ Phật đản tại chùa" loading="lazy">
           <div class="g-overlay"><span>Đại lễ Phật đản</span></div>
         </div>
         <div class="g-item reveal">
-          <img src="images/garden.png" alt="Vườn chùa">
+          <img src="images/garden.png" alt="Khuôn viên xanh mát của chùa" loading="lazy">
           <div class="g-overlay"><span>Khuôn viên chùa</span></div>
         </div>
         <div class="g-item reveal">
-          <img src="images/hero.png" alt="Sân chùa">
+          <img src="images/hero.png" alt="Sân chùa trong ngày lễ hội" loading="lazy">
           <div class="g-overlay"><span>Sân chùa ngày lễ</span></div>
         </div>
         <div class="g-item reveal">
-          <img src="images/ceremony.png" alt="Phật tử lễ Phật">
+          <img src="images/ceremony.png" alt="Phật tử dâng hương lễ Phật" loading="lazy">
           <div class="g-overlay"><span>Phật tử lễ Phật</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DONATION TRANSPARENCY ========== -->
+  <section class="donate" id="donate">
+    <div class="container">
+      <div class="section-title reveal">
+        <h2>Cúng Dường & Đóng Góp</h2>
+        <div class="lotus-divider">
+          <svg viewBox="0 0 24 24"><path d="M12 2C10.08 4.08 8 7.27 8 10c0 2.76 1.79 5 4 5s4-2.24 4-5c0-2.73-2.08-5.92-4-8z"/></svg>
+        </div>
+        <p>Minh bạch và trách nhiệm trong việc sử dụng mọi khoản đóng góp</p>
+      </div>
+      <div class="donate-content reveal">
+        <div class="donate-statement">
+          <div class="donate-icon">🙏</div>
+          <h3>Cam Kết Minh Bạch</h3>
+          <p>Chùa Hồng Đức cam kết sử dụng <strong>100% mọi khoản đóng góp</strong> vào các mục đích phi lợi nhuận sau:</p>
+          <ul class="donate-list">
+            <li>
+              <span class="check">✓</span>
+              <span><strong>Tu bổ cơ sở vật chất</strong> — Bảo trì, sửa chữa và nâng cấp Chánh điện, khuôn viên chùa phục vụ sinh hoạt tôn giáo của cộng đồng.</span>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <span><strong>Chương trình phát gạo từ thiện</strong> — Duy trì chương trình phát gạo hàng tháng cho người nghèo, người già neo đơn tại địa phương.</span>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <span><strong>Cứu trợ thiên tai</strong> — Hỗ trợ khẩn cấp cho đồng bào bị ảnh hưởng bởi bão lũ tại miền Trung.</span>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <span><strong>Hoạt động giáo dục Phật pháp</strong> — Tổ chức các khóa tu, lớp giáo lý và chương trình hướng thiện cho cộng đồng.</span>
+            </li>
+          </ul>
+          <div class="donate-note">
+            <p>📋 Chùa Hồng Đức hoạt động dưới sự quản lý của <strong>Giáo hội Phật giáo Việt Nam tỉnh Quảng Nam</strong> và tuân thủ nghiêm ngặt các quy định về tài chính của tổ chức tôn giáo theo pháp luật Việt Nam. Mọi khoản thu chi đều được ghi nhận minh bạch và báo cáo theo quy định.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -314,46 +536,93 @@
         <div class="lotus-divider">
           <svg viewBox="0 0 24 24"><path d="M12 2C10.08 4.08 8 7.27 8 10c0 2.76 1.79 5 4 5s4-2.24 4-5c0-2.73-2.08-5.92-4-8z"/></svg>
         </div>
-        <p>Thông tin liên lạc và bản đồ</p>
+        <p>Thông tin liên lạc, biểu mẫu liên hệ và bản đồ</p>
       </div>
       <div class="contact-grid reveal">
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="c-icon">📍</div>
-            <div>
-              <h4>Địa chỉ</h4>
-              <p>Xã Điện Hồng, Thị xã Điện Bàn,<br>Tỉnh Quảng Nam, Việt Nam</p>
+        <!-- Left: Info + Form -->
+        <div class="contact-left">
+          <div class="contact-info">
+            <div class="contact-item" id="contact-address">
+              <div class="c-icon">📍</div>
+              <div>
+                <h4>Địa chỉ</h4>
+                <p>Thôn Lạc Thành, Xã Điện Hồng,<br>Thị xã Điện Bàn, Tỉnh Quảng Nam, Việt Nam</p>
+              </div>
+            </div>
+            <div class="contact-item" id="contact-abbot">
+              <div class="c-icon">🙏</div>
+              <div>
+                <h4>Trụ trì</h4>
+                <p>Thầy Thích Bửu Nhân</p>
+              </div>
+            </div>
+            <div class="contact-item" id="contact-email">
+              <div class="c-icon">📧</div>
+              <div>
+                <h4>Email</h4>
+                <p><a href="mailto:minhviet@chuahongduc.online" class="email-link">minhviet@chuahongduc.online</a></p>
+              </div>
+            </div>
+            <div class="contact-item" id="contact-hours">
+              <div class="c-icon">⏰</div>
+              <div>
+                <h4>Giờ mở cửa</h4>
+                <p>Hàng ngày: 04:00 – 21:00<br>Quý Phật tử có thể đến lễ Phật mọi lúc trong giờ mở cửa.</p>
+              </div>
             </div>
           </div>
-          <div class="contact-item">
-            <div class="c-icon">🙏</div>
-            <div>
-              <h4>Trụ trì</h4>
-              <p>Thầy Thích Bửu Nhân</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="c-icon">📧</div>
-            <div>
-              <h4>Email</h4>
-              <p>Đang cập nhật...</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="c-icon">⏰</div>
-            <div>
-              <h4>Giờ mở cửa</h4>
-              <p>Hàng ngày: 04:00 – 21:00<br>Quý Phật tử có thể đến lễ Phật mọi lúc trong giờ mở cửa.</p>
-            </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper">
+            <h3>Gửi Thông Tin Liên Hệ</h3>
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/minhviet@chuahongduc.online" method="POST" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name">Họ và tên <span class="required">*</span></label>
+                  <input type="text" id="form-name" name="name" required placeholder="Nhập họ và tên">
+                </div>
+                <div class="form-group">
+                  <label for="form-email">Email <span class="required">*</span></label>
+                  <input type="email" id="form-email" name="email" required placeholder="Nhập địa chỉ email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="form-subject">Chủ đề</label>
+                <select id="form-subject" name="subject">
+                  <option value="">— Chọn chủ đề —</option>
+                  <option value="info">Hỏi thông tin về chùa</option>
+                  <option value="volunteer">Đăng ký tình nguyện</option>
+                  <option value="retreat">Đăng ký khóa tu</option>
+                  <option value="donation">Cúng dường / Đóng góp</option>
+                  <option value="other">Khác</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="form-message">Nội dung <span class="required">*</span></label>
+                <textarea id="form-message" name="message" rows="5" required placeholder="Nhập nội dung tin nhắn..."></textarea>
+              </div>
+              <!-- Honeypot anti-spam -->
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+              <input type="hidden" name="_subject" value="Liên hệ từ website Chùa Hồng Đức">
+              <button type="submit" id="form-submit" class="form-submit">
+                <span class="btn-text">Gửi Tin Nhắn</span>
+                <span class="btn-loading" style="display:none;">Đang gửi...</span>
+              </button>
+              <div id="form-status" class="form-status"></div>
+            </form>
           </div>
         </div>
-        <div class="map-wrapper">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.5!2d108.1497346!3d15.8814191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314205468c616d61%3A0x568bff6d4e1f7081!2zQ2jDuWEgSOG7k25nIMSQ4bupYw!5e0!3m2!1svi!2svn"
-            allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Bản đồ Chùa Hồng Đức">
-          </iframe>
+
+        <!-- Right: Map -->
+        <div class="contact-right">
+          <div class="map-wrapper">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.5!2d108.1497346!3d15.8814191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314205468c616d61%3A0x568bff6d4e1f7081!2zQ2jDuWEgSOG7k25nIMSQ4bupYw!5e0!3m2!1svi!2svn"
+              allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Bản đồ vị trí Chùa Hồng Đức tại Thôn Lạc Thành, xã Điện Hồng">
+            </iframe>
+          </div>
         </div>
       </div>
     </div>
@@ -362,20 +631,49 @@
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
+      <!-- Legal Identity Banner -->
+      <div class="footer-legal">
+        <div class="legal-badge">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          <span>Tổ chức tôn giáo phi lợi nhuận được công nhận</span>
+        </div>
+        <div class="legal-details">
+          <div class="legal-row">
+            <span class="legal-label">Tên cơ sở:</span>
+            <span class="legal-value">Chùa Hồng Đức</span>
+          </div>
+          <div class="legal-row">
+            <span class="legal-label">Tên pháp lý được công nhận:</span>
+            <span class="legal-value"><strong>Đại diện tín đồ Phật giáo xã Điện Hồng, huyện Điện Bàn</strong></span>
+          </div>
+          <div class="legal-row">
+            <span class="legal-label">Quyết định thành lập:</span>
+            <span class="legal-value">Số 1286/QĐ-UBND do UBND tỉnh Quảng Nam cấp</span>
+          </div>
+          <div class="legal-row">
+            <span class="legal-label">Trực thuộc:</span>
+            <span class="legal-value">Giáo hội Phật giáo Việt Nam tỉnh Quảng Nam</span>
+          </div>
+        </div>
+      </div>
+
       <div class="footer-grid">
         <div class="footer-about">
           <h3>☸ Chùa Hồng Đức</h3>
-          <p>Ngôi chùa tọa lạc tại xã Điện Hồng, thị xã Điện Bàn, tỉnh Quảng Nam. Nơi tu tập, hướng dẫn Phật pháp và sinh hoạt tâm linh cho Phật tử và nhân dân trong vùng.</p>
-          <p style="margin-top:12px; font-size:0.8rem; opacity:0.6;">Đây là website chính thức của Chùa Hồng Đức. Mọi hình thức phát hành lại thông tin từ website này xin vui lòng không làm thay đổi nội dung và hình thức trình bày.</p>
+          <p>Ngôi chùa tọa lạc tại Thôn Lạc Thành, xã Điện Hồng, thị xã Điện Bàn, tỉnh Quảng Nam. Nơi tu tập, hướng dẫn Phật pháp, từ thiện xã hội và sinh hoạt tâm linh cho Phật tử và nhân dân trong vùng.</p>
+          <div class="footer-contact-info">
+            <p>📍 Thôn Lạc Thành, Xã Điện Hồng, Thị xã Điện Bàn, Quảng Nam</p>
+            <p>📧 <a href="mailto:minhviet@chuahongduc.online">minhviet@chuahongduc.online</a></p>
+          </div>
         </div>
         <div class="footer-links">
           <h4>Liên kết</h4>
           <ul>
             <li><a href="#home">Trang chủ</a></li>
-            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#about">Về chúng tôi</a></li>
+            <li><a href="#programs">Hoạt động</a></li>
             <li><a href="#schedule">Lịch sinh hoạt</a></li>
             <li><a href="#news">Phật sự</a></li>
-            <li><a href="#dharma">Pháp thoại</a></li>
             <li><a href="#gallery">Hình ảnh</a></li>
             <li><a href="#contact">Liên hệ</a></li>
           </ul>
@@ -389,13 +687,14 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Chùa Hồng Đức — <a href="https://chuahongduc.online">chuahongduc.online</a></p>
+        <p>© 2026 Chùa Hồng Đức (Đại diện tín đồ Phật giáo xã Điện Hồng) — <a href="https://chuahongduc.online">chuahongduc.online</a></p>
+        <p class="footer-disclaimer">Đây là website chính thức của Chùa Hồng Đức. Website này không chứa bất kỳ nội dung thương mại hay quảng cáo nào.</p>
       </div>
     </div>
   </footer>
 
   <!-- ========== LIGHTBOX ========== -->
-  <div class="lightbox" id="lightbox">
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Xem ảnh phóng to">
     <button class="lightbox-close" aria-label="Đóng">✕</button>
     <img id="lightbox-img" src="" alt="Gallery image">
   </div>

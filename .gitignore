@@ -1,0 +1,15 @@
+# Agent & Tool Metadata
+.agent/
+.domyh/
+.tempmediaStorage/
+.system_generated/
+browser/
+
+# Local raw assets / scans / zip files
+*.zip
+Screenshot *
+QĐTL*
+552cc65c-*.jpg
+9d49f421-*.jpg
+upscalemedia-transformed.jpeg
+ilovepdf_jpg-to-pdf/

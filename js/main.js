@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initSmoothScroll();
   initLightbox();
+  initReadMore();
+  initContactForm();
 });
 
 /* --- Sticky Header with scroll effect --- */
@@ -141,4 +143,126 @@ function initLightbox() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
   });
+}
+
+/* --- Read More Toggle for News Cards --- */
+function initReadMore() {
+  document.querySelectorAll('.read-more-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const card = btn.closest('.card-body');
+      if (!card) return;
+
+      const excerpt = card.querySelector('.news-excerpt');
+      const full = card.querySelector('.news-full');
+      if (!excerpt || !full) return;
+
+      const isExpanded = btn.classList.contains('expanded');
+
+      if (isExpanded) {
+        // Collapse
+        full.style.display = 'none';
+        excerpt.style.display = '';
+        btn.classList.remove('expanded');
+        btn.childNodes[0].textContent = 'Đọc thêm ';
+      } else {
+        // Expand
+        excerpt.style.display = 'none';
+        full.style.display = 'block';
+        btn.classList.add('expanded');
+        btn.childNodes[0].textContent = 'Thu gọn ';
+      }
+    });
+  });
+}
+
+/* --- Contact Form Validation & Submission --- */
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const nameInput = document.getElementById('form-name');
+  const emailInput = document.getElementById('form-email');
+  const messageInput = document.getElementById('form-message');
+  const submitBtn = document.getElementById('form-submit');
+  const statusEl = document.getElementById('form-status');
+
+  // Clear error on input
+  [nameInput, emailInput, messageInput].forEach(input => {
+    if (!input) return;
+    input.addEventListener('input', () => {
+      input.classList.remove('error');
+      statusEl.textContent = '';
+      statusEl.className = 'form-status';
+    });
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Validate
+    let hasError = false;
+
+    if (!nameInput.value.trim()) {
+      nameInput.classList.add('error');
+      hasError = true;
+    }
+
+    if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
+      emailInput.classList.add('error');
+      hasError = true;
+    }
+
+    if (!messageInput.value.trim()) {
+      messageInput.classList.add('error');
+      hasError = true;
+    }
+
+    if (hasError) {
+      statusEl.textContent = 'Vui lòng điền đầy đủ các trường bắt buộc.';
+      statusEl.className = 'form-status error';
+      return;
+    }
+
+    // Submit
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnLoading = submitBtn.querySelector('.btn-loading');
+    submitBtn.disabled = true;
+    if (btnText) btnText.style.display = 'none';
+    if (btnLoading) btnLoading.style.display = 'inline';
+
+    try {
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        statusEl.textContent = '✓ Tin nhắn đã được gửi thành công! Chúng tôi sẽ phản hồi sớm nhất.';
+        statusEl.className = 'form-status success';
+        form.reset();
+      } else {
+        throw new Error('Server error');
+      }
+    } catch (err) {
+      // Fallback: open mailto
+      const subject = encodeURIComponent('Liên hệ từ website Chùa Hồng Đức');
+      const body = encodeURIComponent(
+        `Họ tên: ${nameInput.value}\nEmail: ${emailInput.value}\nChủ đề: ${document.getElementById('form-subject')?.value || ''}\n\nNội dung:\n${messageInput.value}`
+      );
+      window.location.href = `mailto:minhviet@chuahongduc.online?subject=${subject}&body=${body}`;
+      statusEl.textContent = 'Đang mở ứng dụng email để gửi tin nhắn...';
+      statusEl.className = 'form-status success';
+    } finally {
+      submitBtn.disabled = false;
+      if (btnText) btnText.style.display = 'inline';
+      if (btnLoading) btnLoading.style.display = 'none';
+    }
+  });
+}
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
