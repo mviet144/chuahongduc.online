@@ -41,7 +41,10 @@ img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; color: inherit; transition: color var(--transition); }
 ul { list-style: none; }
 h1,h2,h3,h4,h5 { font-family: 'Playfair Display', serif; line-height: 1.3; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.25rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
 /* --- Accent Line --- */
 .accent-line {
@@ -426,12 +429,14 @@ h1,h2,h3,h4,h5 { font-family: 'Playfair Display', serif; line-height: 1.3; }
   background: var(--bg-white); border-radius: var(--radius);
   overflow: hidden; box-shadow: var(--shadow-sm);
   transition: all var(--transition); border: 1px solid var(--border);
+  display: flex; flex-direction: column;
 }
 .news-card:hover {
   transform: translateY(-6px); box-shadow: var(--shadow-lg);
 }
 .news-card .card-img {
   height: 200px; overflow: hidden; position: relative;
+  flex-shrink: 0;
 }
 .news-card .card-img img {
   width: 100%; height: 100%; object-fit: cover;
@@ -444,7 +449,10 @@ h1,h2,h3,h4,h5 { font-family: 'Playfair Display', serif; line-height: 1.3; }
   padding: 4px 12px; border-radius: 6px;
   font-size: 0.75rem; font-weight: 600;
 }
-.news-card .card-body { padding: 20px; }
+.news-card .card-body {
+  padding: 20px;
+  flex: 1; display: flex; flex-direction: column;
+}
 .news-card .card-tag {
   display: inline-block; background: rgba(107,29,14,0.08);
   color: var(--primary); padding: 3px 10px; border-radius: 4px;
@@ -457,6 +465,7 @@ h1,h2,h3,h4,h5 { font-family: 'Playfair Display', serif; line-height: 1.3; }
 }
 .news-card .news-excerpt {
   font-size: 0.85rem; color: var(--text-light); line-height: 1.6;
+  flex: 1;
 }
 .news-card .news-full {
   margin-top: 12px;
@@ -957,6 +966,12 @@ h1,h2,h3,h4,h5 { font-family: 'Playfair Display', serif; line-height: 1.3; }
   .dharma-card .card-info { padding: 16px; }
   .donate-statement { padding: 24px 20px; }
   .contact-form-wrapper { padding: 20px; }
+  .hero-content h2 { font-size: 1.5rem; letter-spacing: 1px; }
+  .hero-content .hero-sub { font-size: 0.8rem; letter-spacing: 1px; }
+  .hero-content .hero-addr { font-size: 0.8rem; }
+  .hero-content .hero-legal { font-size: 0.68rem; }
+  .section-title h2 { font-size: 1.5rem; }
+  .container { padding: 0 16px; }
 }
 
 /* ============================================
