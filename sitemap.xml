@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://chuahongduc.online/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://chuahongduc.online/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://chuahongduc.online/index.html</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://chuahongduc.online/gioi-thieu.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chuahongduc.online/hoat-dong.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chuahongduc.online/tin-tuc.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chuahongduc.online/kien-thuc.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chuahongduc.online/hinh-anh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chuahongduc.online/lien-he.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://chuahongduc.online/cung-duong.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://chuahongduc.online/lich-su-chua-hong-duc.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://chuahongduc.online/tru-tri-thich-buu-nhan.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://chuahongduc.online/phat-gao-tu-thien.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chuahongduc.online/khoa-tu-mua-he.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chuahongduc.online/cuu-tro-bao-lu.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chuahongduc.online/hoc-bong-hieu-hoc.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chuahongduc.online/phat-dan-2570.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chuahongduc.online/vu-lan-bao-hieu.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chuahongduc.online/ram-thang-gieng.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chuahongduc.online/trung-tu-chanh-dien.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chuahongduc.online/tu-dieu-de.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chuahongduc.online/bat-chanh-dao.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chuahongduc.online/ngu-gioi.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chuahongduc.online/quy-y-tam-bao.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chuahongduc.online/y-nghia-quy-y.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chuahongduc.online/niem-phat.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chuahongduc.online/huong-dan-thien.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://chuahongduc.online/tung-kinh-tai-nha.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
 </urlset>
